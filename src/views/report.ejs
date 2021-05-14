@@ -1,0 +1,51 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10 my-5">
+
+      <h1 class="text-center">Relatórios</h1>
+
+      <h2>Filtro</h2>    
+      <input class="form-control" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search..">
+      <br>
+      
+      <div class="table table-bordered table-striped">
+        <table class="table my-3" id="myTable">
+          <tr>
+            <th>Cliente</th>
+            <th>Nome</th>
+            <th>Início</th>
+            <th>Tempo</th>
+            <th>Investimento</th>
+            <th>Vizualizações</th>
+            <th>Cliques</th>
+            <th>Compartilhamento</th>
+          </tr>
+          <% anunciosFinal.forEach( anuncio => {%>
+          
+            <tr>
+              <td><%= anuncio.cliente %></td>
+              <td><%= anuncio.nome %></td>
+              <td><%= anuncio.data %></td>
+              <td><%= anuncio.intervalo %> Dias</td>
+              <td><%= anuncio.totalInvestido %>,00 R$</td>
+              <td><%= anuncio.visualizacoes %></td>
+              <td><%= anuncio.cliques %></td>
+              <td><%= anuncio.compartilhamentos %></td>
+            </tr>
+         
+          
+          <% }); %>  
+        </table>
+
+      </div>
+
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+</div>
+<script src="../../frontend/main.js"></script>
+  <%- include('includes/footer')%>

@@ -1,0 +1,42 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-5">
+      <h1 class="text-center">Cadastro de anúncios</h1>
+      <p class="text-center lead">Adicione o anúncio:</p>
+
+        <%- include('includes/messages');%>
+
+        <form action="/index/register" method="POST">  
+        <input type="hidden" name="_csrf" value= <%= csrfToken %>>
+        <div class="form-group">
+          <label>Nome do anúncio</label>
+          <input value="" type="text" class="form-control" name="nome">
+        </div><br>
+        <div class="form-group">
+          <label>Cliente</label>
+          <input value="" type="text" class="form-control" name="cliente">
+        </div><br>
+        <div class="form-group">
+          <label>Data de início</label>
+          <input value="" type="date" class="form-control" name="inicio">
+        </div><br>
+        <div class="form-group">
+          <label>Data de término</label>
+          <input value="" type="date" class="form-control" name="termino">
+        </div><br>
+        <div class="form-group">
+          <label>Investimento por dia</label>
+          <input value="" type="number" class="form-control" name="investimento">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+  <%- include('includes/footer')%>
