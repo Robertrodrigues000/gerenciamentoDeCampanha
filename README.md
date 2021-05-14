@@ -8,6 +8,10 @@ Um sistema de gerenciamento permitirá a gestão de anúncios e o rastreio dos r
 - [x] Relatório de quantidade máxima de visualizações, cliques e compartilhamentos
 - [x] Relatórios tem filtro geral, onde você pode filtrar por cliente, data, preço pago, entre outros.
 
+### Pré-requisitos
+
+- Editor de texto javaScript
+
 ### 🎲 Rodando o programa
 
 ```bash
