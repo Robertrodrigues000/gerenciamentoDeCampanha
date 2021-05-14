@@ -1,4 +1,4 @@
-# gerenciamentoDeCampanha
+# Sistema de gerenciamento De Campanha Publicitária
 Um sistema de gerenciamento permitirá a gestão de anúncios e o rastreio dos resultados das campanhas.
 
 ### Features
